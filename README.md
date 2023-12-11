@@ -22,7 +22,7 @@ Ideal for small/medium aiflow deployments.
 
 **Step 2:** Go through .env file, init_airflow_setup.sh, docker-compose.yml file to change settings according to your preference. Or you can just keep them as it is for local development.
 
-**Step 3:** Build customer docker image Run `docker build . -f Dockerfil  --tag dbt-airflow`
+**Step 3:** Build customer docker image Run `docker build . -f Dockerfile  --tag dbt-airflow`
 
 **Step 3:** Run `docker-compose up -d`
 

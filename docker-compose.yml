@@ -109,7 +109,7 @@ services:
 
   airflow-flower:
     build: .
-    image: resdev-airflow:latest
+    image: dbt-airflow:latest
     container_name: airflow_flower_cont
     depends_on:
       - postgres
