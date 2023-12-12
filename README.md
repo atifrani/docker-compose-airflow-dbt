@@ -22,8 +22,6 @@ Ideal for small/medium aiflow deployments.
 
 **Step 2:** Go through .env file, init_airflow_setup.sh, docker-compose.yml file to change settings according to your preference. Or you can just keep them as it is for local development.
 
-**Step 3:** Build customer docker image Run `docker build . -f Dockerfile  --tag dbt-airflow`
-
 **Step 3:** Run `docker-compose up -d`
 
 **Step 4:** Run `sh init_airflow_setup.sh` (Run this only for initial deployment)
@@ -31,3 +29,20 @@ Ideal for small/medium aiflow deployments.
 **Step 5:** Go to http://localhost:8080 and login with user: admin and password: password12345 as specified in init_airflow_setup.sh script
 
 **Step 6:** Run few dags and monitor Celery workers at http://localhost:5555
+
+
+### Debug:
+
+docker exec -ti airflow_webserver_cont /bin/bash
+
+airflow db init 
+
+docker exec -ti postgresql_cont /bin/bash
+
+psql -d airflow -U postgres
+
+\l
+
+SELECT *  FROM pg_user;
+
+ALTER USER postgres WITH PASSWORD 'postgres';
