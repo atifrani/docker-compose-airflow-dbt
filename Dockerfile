@@ -7,6 +7,7 @@ USER root
 RUN apt-get update -yqq \
     && apt-get install -y vim \
     && apt-get install -y netcat \
+    && apt-get install -y git \
     && apt-get autoremove -yqq --purge \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
