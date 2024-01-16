@@ -37,6 +37,7 @@ services:
       - ./airflow-data/plugins:/opt/airflow/plugins
       - ./airflow-data/dbt:/opt/airflow/dbt
       - ./airflow-data/include:/opt/airflow/include
+      - ./airflow-data/sql:/opt/airflow/sql    
       - logs-volume:/opt/airflow/logs
 
   airflow-scheduler:
@@ -54,6 +55,7 @@ services:
       - ./airflow-data/plugins:/opt/airflow/plugins
       - ./airflow-data/dbt:/opt/airflow/dbt
       - ./airflow-data/include:/opt/airflow/include
+      - ./airflow-data/sql:/opt/airflow/sql 
       - logs-volume:/opt/airflow/logs
 
   airflow-worker1:
@@ -71,6 +73,7 @@ services:
       - ./airflow-data/plugins:/opt/airflow/plugins
       - ./airflow-data/dbt:/opt/airflow/dbt
       - ./airflow-data/include:/opt/airflow/include
+      - ./airflow-data/sql:/opt/airflow/sql 
       - logs-volume:/opt/airflow/logs
 
   airflow-worker2:
@@ -88,6 +91,7 @@ services:
       - ./airflow-data/plugins:/opt/airflow/plugins
       - ./airflow-data/dbt:/opt/airflow/dbt
       - ./airflow-data/include:/opt/airflow/include
+      - ./airflow-data/sql:/opt/airflow/sql 
       - logs-volume:/opt/airflow/logs
 
   airflow-flower:
@@ -101,6 +105,7 @@ services:
       - ./airflow-data/plugins:/opt/airflow/plugins
       - ./airflow-data/dbt:/opt/airflow/dbt
       - ./airflow-data/include:/opt/airflow/include
+      - ./airflow-data/sql:/opt/airflow/sql 
       - logs-volume:/opt/airflow/logs
     env_file:
       - .env
